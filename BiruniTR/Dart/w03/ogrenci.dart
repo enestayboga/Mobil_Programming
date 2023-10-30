@@ -1,26 +1,53 @@
-//class decleration/defination => sınıfın tanımlanması
-//Sınıf != obje, nesne
-
+//class declaration/definition = sınıf tanımlama
+//sınıf != obje
 class Ogrenci {
-//Üyeler/Sınıfın içindeki herşey
-//01-Statik üyeler (Sonradan anlatılacak)
+//Üyeler/sınıfın içindeki herşey
+//01. Statik üyeler //Sonradan anlatılacak
 
-//02-Instance/kopya-örnek üyeleri
-//  02.1- Field, veri alanları
+//02.Instance members/kopya=örnek üyeleri
+//    01.Field, veri alanları
+  //public access modifiers / erişim denetleyicileri //encapsulation
+  //int? no;
+  //String? ad;
+  //String? soyad;
+  //bool? cinsiyet;
 
-  int? no;
-  String? ad;
-  String? soyad;
-  bool? cinsiyet;
-//  02.2- Properties, Özellikler => metot ile değişkenler arası yapılardır.
-//  getter ve setter bir propertiesdir.
+  //private access modifiers / erişim denetleyicileri //encapsulation
+  int? _no;
+  String? _ad;
+  String? _soyad;
+  bool? _cinsiyet;
 
-  set setNo(int No) {
-    this.no = no;
+//    02.Properties, Özellikler //metot ile değişken arası yapılardır/ getter ve setter.
+  set setNo(int no) {
+    //....
+    this._no = no;
   }
 
   int? get getNo {
-    return this.no;
+    //...
+    return this._no;
   }
-  
+
+//    03.Metotlar/Fonksiyonlar.
+  String adinNe() {
+    return "Merhaba benim adım $_ad";
+  }
+
+  void sarkiSoyle() {
+    print("Şuan senin için şarkı söylüyorum...");
+  }
+
+  double sinavdanKacAldin(String dersKodu) {
+    if (dersKodu == "MP1") {
+      return 98.98;
+    } else {
+      return 85.00;
+    }
+  }
+
+//    04.Yapıcı/kurucu metot/ Constructor/method.
+// diğer derste görecez
+
+//    05.Fabrika kurucular/ Factory Constructor/method.
 }
