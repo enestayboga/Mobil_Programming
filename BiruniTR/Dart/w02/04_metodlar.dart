@@ -18,7 +18,7 @@ void main(List<String> args) {
 
 //fonksiyon/metodlar/metotlar/routine/yordam/procedure
 
-//1. void metodlar, parametresiz
+//1. void metodlar, parametresiz/void method is np return type
 
 Toplam1() {
   // void Toplam1()
@@ -27,13 +27,17 @@ Toplam1() {
   print(a + b);
 }
 
-//2. void metodlar, parametreli
+//2. void metodlar, parametreli/daha fonksiyonel uncouple
+//Daha kullanışlı ve verimlilerdir.
+
 void Toplam2(int a, int b) {
   print(a + b);
   //işlemler
 }
 
-//3. tip/type metodlar, parametresiz/ return olmalıdır.
+//3. tip/type metodlar, parametresiz/return olmak zorundadır.
+//Tip/type ile başlamalıdır.
+
 int Toplam4() {
   int a = 4;
   int b = 5;
@@ -42,12 +46,17 @@ int Toplam4() {
 }
 
 //4. tip/type metodlar, parametreli/ return olmalıdır.
+//En esnek yapıda olanlardır.
+//Fonksiyonel progrramlamada en çok tercih edilen yöntemdir.
+
 int Toplam5(int a, int b) {
   //işlemler
   return a + b;
 }
 
-//5. Recursive / Özyinelemeli metodlar
+//5. Recursive / Özyinelemeli metodlar/Kendini çağıran methodlar
+//Recursive methodun yapısı aşağıdaki gibi olmak zorundadır.
+
 int Faktoriyel(int n) {
   if (n <= 0) {
     return 1;
@@ -58,13 +67,17 @@ int Faktoriyel(int n) {
 
 //6. Fat arrow/ lambda expression/ metodlar
 int Sum(int a, int b) => a + b;
+
+// '=>' işareti ise anlamını taşır. Açılımı aşağıdaki gibi
+
 //int Sum(int a, int b){
 //return a+b;
 //}
 
-double Divide(int a, int b) => a / b;
+double Divide(int a, int b) => a / b; // '=>' işareti ise anlamını taşır.
 
 //7. Fonksiyon tipli, yada fonksiyon parametreli fonksiyonlar
+//Methoda parametre olarak başka bir methodu gösterme yöntemi
 
 int MatematikIslemi(Function(int, int) islem, int a, int b) {
   return islem(a, b);
@@ -81,7 +94,10 @@ Function IslemSec(int islemKod) {
   return Toplam5;
 }
 
-//8. Anonim/Anonymous metodlar
+//8. Anonim/Anonymous metodlar/isimisiz metotlar
+//Manda fonksiyonlarını geliştirilmiş hali
+//Çok kullanışlı yapılardır.
+//İç içe geçmiş(Nested) yapılarda çok görülür.
 
 var product = (int a, int b) {
   //işlemler

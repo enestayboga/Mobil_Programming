@@ -1,3 +1,4 @@
+
 void main(List<String> args) {
   var sek1 = Dikdortgen();
   sek1.alanHesapla([2, 3]);
