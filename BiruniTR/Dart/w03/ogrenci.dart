@@ -2,7 +2,7 @@
 //sınıf != obje
 class Ogrenci {
 //Üyeler/sınıfın içindeki herşey
-//01. Statik üyeler //Sonradan anlatılacak
+//01. Statik üyeler //Sonradan anlatılacak ü
 
 //02.Instance members/kopya=örnek üyeleri
 //    01.Field, veri alanları
@@ -13,6 +13,8 @@ class Ogrenci {
   //bool? cinsiyet;
 
   //private access modifiers / erişim denetleyicileri //encapsulation
+  //private oluşturmak için değişken isminin önüne '_' işareti konulması yeterlidir.
+  
   int? _no;
   String? _ad;
   String? _soyad;
@@ -47,7 +49,7 @@ class Ogrenci {
   }
 
 //    04.Yapıcı/kurucu metot/ Constructor/method.
-// diğer derste görecez
+// diğer derste göreceğiz.
 
 //    05.Fabrika kurucular/ Factory Constructor/method.
 }

@@ -18,3 +18,4 @@ void main(List<String> args) {
 
 //(class==Sınıf) != (object, nesne)
 
+
