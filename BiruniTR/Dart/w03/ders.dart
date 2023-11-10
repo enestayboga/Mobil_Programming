@@ -1,6 +1,7 @@
 import 'Ogrenci.dart';
 
 class Ders {
+
   static int? uniKod =
       1; //tüm dersler için ıuni kod aynı olduğundan bu field statik olabilir.
 
