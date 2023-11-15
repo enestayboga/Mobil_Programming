@@ -30,7 +30,7 @@ void main(List<String> args) async {
   
   print("İş B bitti.");
 
-  print("*******Çok acil bir bitti.*********");
+  print("*******Çok acil bir iş bitti.*********");
 
   print("Tüm işler bitti.");
 }
