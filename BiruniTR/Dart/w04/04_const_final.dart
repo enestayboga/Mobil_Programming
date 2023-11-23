@@ -6,7 +6,7 @@ void main(List<String> args) {
   final int a3; //Bir kez değişebilir. Null değer atayabiliriz.
   a3 = 5;
 
-  const a4 = 1; //Bir kez değişebilir. Null değer ATANAMAZ.
+  const a4 = 1; //Direkt değer atanmalı, Bir kez değişebilir. Null değer ATANAMAZ.
   
 final Student s1 = Student(id: 1, fullname: "Ahmet");
 // burada finally olan şey s1 adresidir.

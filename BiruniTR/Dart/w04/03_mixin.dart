@@ -1,3 +1,9 @@
+
+//mixin => yama diyebiliriz
+//inheritance vaya implamanstasyon kullanmadan bazı özellikler ekleme için kullanılır.
+//sınıf olarak değerlendirilemezler.
+//with anahtar kelimesi önemli!!!
+
 void main(List<String> args) {
   Kus k = Kus();
   k.m();
