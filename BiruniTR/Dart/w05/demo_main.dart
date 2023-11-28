@@ -1,24 +1,39 @@
-void main(List<String> args) {
-  print("İşler başladı");
-
-  Future.delayed(Duration(seconds: 1), () async {
-    for (var i = 0; i < 10; i++) {
-      await Future.delayed(Duration(seconds: 1));
-      print("is A $i");
-    }
+void main(List<String> args) async {
+  print("Başlangıç");
+  // await isA();
+  /*
+  ///Senkron
+  var sonuc = await isB();
+  print(sonuc);
+  print("Bitiş");
+  */
+  //Asenkron
+  Future.delayed(Duration.zero, () async {
+    var sonuc = await isB();
+    print(sonuc);
+    print("Bitiş");
   });
+}
 
-  print("İş A bitti.");
+//Asenkron
+Future isA() async {
+  await Future.delayed(Duration(seconds: 0), () async {
+    for (var i = 0; i < 10; i++) {
+      await Future.delayed(
+          Duration(seconds: 1)); //Her turda bir saniye bekletir.
+      print("İş A $i");
+    }
+    print("İş A bitti");
+  });
+}
 
-  Future.delayed(Duration(seconds: 1), () async {
-    for (var i = 0; i < 15; i++) {
-      await Future.delayed(Duration(seconds: 1));
+Future<String> isB() async {
+  await Future.delayed(Duration(seconds: 0), () async {
+    for (var i = 0; i < 10; i++) {
+      await Future.delayed(
+          Duration(seconds: 1)); //Her turda bir saniye bekletir.
       print("İş B $i");
     }
   });
-
-  print("İş B bitti.");
-
-  print("****Çok acil bir iş bitti");
-  print("Tüm işler bitti");
+  return "İş B bitti";
 }

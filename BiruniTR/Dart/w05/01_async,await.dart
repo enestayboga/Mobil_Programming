@@ -14,9 +14,9 @@ void main(List<String> args) async {
         print("İş A $i");
       }
     });
-  //Burada sen seviren süreye göre başla ama aşağıdakiler seni beklemeyecek şekilde yazdık.
+  //Burada sen verilen süreye göre başla ama aşağıdakiler seni beklemeyecek şekilde yazdık.
   //A başlarken aynı zamanda B de aşağıda sanki A bitmiş gibi sıra kendine gelmiş gibi davranacak.
-
+  
   print("İş A bitti.");
 
   Future.delayed(Duration(days: 0), () async{
