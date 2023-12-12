@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Hesap Makinesi",
+      debugShowCheckedModeBanner: false,
       home: Iskele(),
     );
   }
@@ -18,6 +19,7 @@ class Iskele extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Basit Hesap Makinesi"),
+        backgroundColor: Colors.blue,
       ),
       body: AnaEkran(),
     );
@@ -32,7 +34,7 @@ class AnaEkran extends StatefulWidget {
 }
 
 class _AnaEkranState extends State<AnaEkran> {
-  num? sayi1, sayi2, sonuc;
+  num? sayi1, sayi2, sonuc = 0;
 
   TextEditingController t1 = TextEditingController();
   TextEditingController t2 = TextEditingController();
@@ -70,6 +72,14 @@ class _AnaEkranState extends State<AnaEkran> {
       sayi2 = num.parse(t2.text);
 
       sonuc = (sayi1! / sayi2!)!;
+    });
+  }
+
+  degiskenTemizleyici() {
+    setState(() {
+      t1.clear();
+      t2.clear();
+      sonuc = 0;
     });
   }
 
@@ -123,6 +133,13 @@ class _AnaEkranState extends State<AnaEkran> {
                 child: Text(
                   "Böl",
                 )),
+            SizedBox(
+              height: 15.0,
+            ),
+            ElevatedButton(
+              onPressed: degiskenTemizleyici,
+              child: Text("Temizle"),
+            )
           ],
         ),
       ),
