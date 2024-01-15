@@ -1,0 +1,42 @@
+{
+    "Users":{
+        "usersLogin":[{
+            "id":"1",
+            "mail":"210404042@st.biruni.edu.tr",
+            "password":"210404042"
+        },
+        {
+            "id":"2",
+            "mail": "210404014@st.biruni.edu.tr",
+            "password": "210404014"
+
+        },
+        {
+            "id": "3",
+            "mail": "210404056@st.biruni.edu.tr",
+            "password": "210404056"
+        }
+            
+        ],
+        "usersInfo":[{
+            "id": 1,
+            "name": "Enes",
+            "surname": "Tayboğa",
+            "department": "Bilgisayar Mühendisliği"
+        },
+        {
+            "id": 2,
+            "name": "Alper",
+            "surname": "Kandemir",
+            "department":"Bilgisayar Mühendisliği"
+        },
+        {
+            "id": 3,
+            "name": "Yasin",
+            "surname": "Seyhun",
+            "department":"Bilgisayar Mühendisliği"
+
+        }
+    ]
+    }
+}
