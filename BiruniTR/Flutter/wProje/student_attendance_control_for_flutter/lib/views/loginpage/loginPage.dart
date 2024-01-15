@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
     getInfo();
 
     animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 5000));
+        vsync: this, duration: Duration(milliseconds: 1000000000));
 
     loginAnimationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 100));
@@ -98,14 +98,22 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.primary,
-      appBar: AppBar(
-        title: Text(""),
-        backgroundColor: AppColors.primary,
-      ),
-      body: getLoginForm(context),
-    );
+        body: Stack(
+      children: [
+        Container(
+            width: screenSize.width,
+            height: screenSize.height,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/biruni-logo-background.jpg"),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: getLoginForm(context)),
+      ],
+    ));
   }
 
   Widget getLoginForm(BuildContext context) {
@@ -119,7 +127,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
         filled: true,
         prefixIcon: Icon(
           Icons.email,
-          color: Colors.orange,
+          color: Colors.blue,
         ),
         contentPadding: EdgeInsets.all(15),
         hintText: "Kullanıcı Adı",
@@ -139,7 +147,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
         filled: true,
         prefixIcon: Icon(
           Icons.password,
-          color: Colors.orange,
+          color: Colors.blue,
         ),
         contentPadding: EdgeInsets.all(15),
         hintText: "Şifre",
@@ -158,7 +166,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                     .copyWith(unselectedWidgetColor: Colors.white),
                 child: Checkbox(
                   checkColor: Colors.white,
-                  activeColor: Colors.orange,
+                  activeColor: Colors.blue,
                   value: _isChecked,
                   onChanged: ((value) {
                     _isChecked = value!;
@@ -177,7 +185,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
     var btnLogin = Material(
       borderRadius: BorderRadius.circular(50),
-      color: Colors.orange,
+      color: Colors.blue,
       elevation: 15,
       child: MaterialButton(
         onPressed: () async {
@@ -213,7 +221,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       offset: Offset(shakingAnimationValues.value, 0),
       child: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(17.0),
+          padding: const EdgeInsets.all(60.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

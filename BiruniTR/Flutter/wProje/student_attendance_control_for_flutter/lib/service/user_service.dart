@@ -4,7 +4,7 @@ import 'package:student_attendance_control_for_flutter/model/user_model.dart';
 import "package:http/http.dart" as http;
 
 class UserService {
-  final String url = "http://192.168.1.39:3000/Users";
+  final String url = "http://172.20.10.7:3000/Users";
   Future<Model?> fetchUsers() async {
     var res = await http.get(Uri.parse(url));
     if (res.statusCode == 200) {
