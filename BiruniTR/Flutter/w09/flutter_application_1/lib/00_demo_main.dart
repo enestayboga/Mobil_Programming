@@ -10,6 +10,7 @@ import 'package:flutter_application_1/07_demo.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ConstrainedBoxExampleDemo(),
+      home: WrapExampleDemo(),
     );
   }
 }
-
