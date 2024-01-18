@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
     getInfo();
 
     animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1000000000));
+        vsync: this, duration: Duration(milliseconds: 5000));
 
     loginAnimationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 100));

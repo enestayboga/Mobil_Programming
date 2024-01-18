@@ -14,7 +14,7 @@ class ConstrainedBoxExample extends StatelessWidget {
             ConstrainedBox(
               constraints: BoxConstraints(
                 minHeight: 50,
-                maxHeight: 150,
+                // maxHeight: 150,
                 maxWidth: 50,
               ),
               child: Container(
