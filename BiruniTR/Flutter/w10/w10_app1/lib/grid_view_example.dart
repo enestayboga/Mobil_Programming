@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:w10_app1/Student.dart';
 import 'package:w10_app1/student.dart';
+import 'package:w10_app1/student.dart';
+import 'package:w10_app1/08_demo_student.dart';
+
+
 
 class GridViewExampleForStudent extends StatelessWidget {
   const GridViewExampleForStudent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var data = getStudentList(100);
+    var data = getStudentDemoList(100);
 
     return Scaffold(
       appBar: AppBar(
@@ -32,7 +36,7 @@ class GridViewExampleForStudent extends StatelessWidget {
     );
   }
 
-  Card getCard(Student student) {
+  Card getCard(StudentDemo student) {
     return Card(
       elevation: 4.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
@@ -75,10 +79,10 @@ class GridViewExampleForStudent extends StatelessWidget {
     );
   }
 
-  List<Student> getStudentList(int count) {
-    var list = <Student>[];
+  List<StudentDemo> getStudentDemoList(int count) {
+    var list = <StudentDemo>[];
     for (var i = 0; i < 150; i++) {
-      list.add(Student(fullName: "$i. Student", phone: "$i. Phone"));
+      list.add(StudentDemo (fullName: "$i. Student", phone: "$i. Phone"));
     }
     return list;
   }
