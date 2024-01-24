@@ -23,9 +23,26 @@ class _StudentsPage1DemoState extends State<StudentsPage1Demo> {
   }
 
   @override
-  
+  void initState() {
+    super.initState();
+    //repository.addStudent(StudentDemo(
+      //  id: 2, firstName: "firstName", lastName: "lastName", departmentId: 1));
+    _loadStudents();
+  }
 
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Text("Students ")),
+      body: ListView.builder(itemBuilder: (contex, index) {
+        return ListTile(
+          title: Text(studentsDemo[index].firstName +
+              " " +
+              studentsDemo[index].lastName),
+          subtitle: Text(studentsDemo[index].departmentId.toString()),
+          trailing: IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
+        );
+      }),
+    );
   }
 }
